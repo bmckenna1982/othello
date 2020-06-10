@@ -1,26 +1,120 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  renderSquare(n) {
+    return (
+      <div className={squareClasses} onClick={props.onClick}>
+        {props.value ? <div className={colorMarkerClasses}></div> : ""}
+      </div>
+    );
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">Let's play Othello</header>
+        <div className="game-board">
+          <div className="game-board-row">
+            <div className="game-board-square">
+              <div className="square-fill">
+                {/* square fill will be absolute position and filled depending on player color when owned */}
+              </div>
+            </div>
+            <div className="game-board-square">
+              <div className="square-fill">
+                {/* square fill will be absolute position and filled depending on player color when owned */}
+              </div>
+            </div>
+            <div className="game-board-square">
+              <div className="square-fill">
+                {/* square fill will be absolute position and filled depending on player color when owned */}
+              </div>
+            </div>
+            <div className="game-board-square">
+              <div className="square-fill">
+                {/* square fill will be absolute position and filled depending on player color when owned */}
+              </div>
+            </div>
+            <div className="game-board-square">
+              <div className="square-fill">
+                {/* square fill will be absolute position and filled depending on player color when owned */}
+              </div>
+            </div>
+            <div className="game-board-square">
+              <div className="square-fill">
+                {/* square fill will be absolute position and filled depending on player color when owned */}
+              </div>
+            </div>
+            <div className="game-board-square">
+              <div className="square-fill">
+                {/* square fill will be absolute position and filled depending on player color when owned */}
+              </div>
+            </div>
+            <div className="game-board-square">
+              <div className="square-fill">
+                {/* square fill will be absolute position and filled depending on player color when owned */}
+              </div>
+            </div>
+          </div>
+          <div className="game-board-row">
+            <div className="game-board-square">
+              <div className="square-fill">
+                {/* square fill will be absolute position and filled depending on player color when owned */}
+              </div>
+            </div>
+          </div>
+          <div className="game-board-row">
+            <div className="game-board-square">
+              <div className="square-fill">
+                {/* square fill will be absolute position and filled depending on player color when owned */}
+              </div>
+            </div>
+          </div>
+          <div className="game-board-row">
+            <div className="game-board-square">
+              <div className="square-fill">
+                {/* square fill will be absolute position and filled depending on player color when owned */}
+              </div>
+            </div>
+          </div>
+          <div className="game-board-row">
+            <div className="game-board-square">
+              <div className="square-fill">
+                {/* square fill will be absolute position and filled depending on player color when owned */}
+              </div>
+            </div>
+          </div>
+          <div className="game-board-row">
+            <div className="game-board-square">
+              <div className="square-fill">
+                {/* square fill will be absolute position and filled depending on player color when owned */}
+              </div>
+            </div>
+          </div>
+          <div className="game-board-row">
+            <div className="game-board-square">
+              <div className="square-fill">
+                {/* square fill will be absolute position and filled depending on player color when owned */}
+              </div>
+            </div>
+          </div>
+          <div className="game-board-row">
+            <div className="game-board-square">
+              <div className="square-fill">
+                {/* square fill will be absolute position and filled depending on player color when owned */}
+              </div>
+            </div>
+          </div>
+          <div className="game-status">
+            White's turn
+            <button className="reset-game" type="button">
+              Reset game
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
-
 export default App;
